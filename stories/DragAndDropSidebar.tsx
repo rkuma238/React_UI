@@ -1,9 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { FlowChartWithState } from '../src'
 import { Content, Page, Sidebar, SidebarItem } from './components'
+import { FlowChartWithState } from '../src'
 import { chartSimple } from './misc/exampleChartState'
-
 const Message = styled.div`
 margin: 10px;
 padding: 10px;
@@ -13,14 +12,14 @@ background: rgba(0,0,0,0.05);
 export const DragAndDropSidebar = () => (
   <Page>
     <Content>
-      <FlowChartWithState initialValue={chartSimple} />
+          <FlowChartWithState initialValue={chartSimple} />
     </Content>
     <Sidebar>
       <Message>
         Drag and drop these items onto the canvas.
       </Message>
       <SidebarItem
-        type="top/bottom"
+        type="Tenant"
         ports={ {
           port1: {
             id: 'port1',
@@ -42,110 +41,135 @@ export const DragAndDropSidebar = () => (
         }}
       />
       <SidebarItem
-        type="bottom-only"
+        type="Cloud"
         ports={ {
           port1: {
+            id: 'port1',
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
+          },
+          port2: {
             id: 'port1',
             type: 'bottom',
             properties: {
               custom: 'property',
             },
           },
+        } }
+        properties={ {
+          custom: 'property',
         }}
       />
       <SidebarItem
-        type="left-right"
+        type="Application_Profile"
         ports={ {
           port1: {
             id: 'port1',
-            type: 'left',
+            type: 'top',
             properties: {
               custom: 'property',
             },
           },
           port2: {
-            id: 'port2',
-            type: 'right',
+            id: 'port1',
+            type: 'bottom',
             properties: {
               custom: 'property',
             },
           },
+        } }
+        properties={ {
+          custom: 'property',
         }}
       />
       <SidebarItem
-        type="all-sides"
+        type="SE_Group"
         ports={ {
           port1: {
             id: 'port1',
-            type: 'left',
-
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
           },
           port2: {
-            id: 'port2',
-            type: 'right',
-          },
-          port3: {
-            id: 'port3',
-            type: 'top',
-          },
-          port4: {
-            id: 'port4',
+            id: 'port1',
             type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
           },
+        } }
+        properties={ {
+          custom: 'property',
         }}
       />
       <SidebarItem
-        type="lots-of-ports"
+        type="SE"
         ports={ {
           port1: {
             id: 'port1',
-            type: 'left',
-
+            type: 'top',
+            properties: {
+              custom: 'property',
+            },
           },
           port2: {
-            id: 'port2',
-            type: 'right',
-          },
-          port3: {
-            id: 'port3',
-            type: 'top',
-          },
-          port4: {
-            id: 'port4',
+            id: 'port1',
             type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
           },
-          port5: {
-            id: 'port5',
-            type: 'left',
-          },
-          port6: {
-            id: 'port6',
-            type: 'right',
-          },
-          port7: {
-            id: 'port7',
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      />
+      <SidebarItem
+        type="top/bottom"
+        ports={ {
+          port1: {
+            id: 'port1',
             type: 'top',
+            properties: {
+              custom: 'property',
+            },
           },
-          port8: {
-            id: 'port8',
+          port2: {
+            id: 'port1',
             type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
           },
-          port9: {
-            id: 'port9',
-            type: 'left',
-          },
-          port10: {
-            id: 'port10',
-            type: 'right',
-          },
-          port11: {
-            id: 'port11',
+        } }
+        properties={ {
+          custom: 'property',
+        }}
+      /> 
+     <SidebarItem
+        type="System"
+        ports={ {
+          port1: {
+            id: 'port1',
             type: 'top',
+            properties: {
+              custom: 'property',
+            },
           },
-          port12: {
-            id: 'port12',
+          port2: {
+            id: 'port1',
             type: 'bottom',
+            properties: {
+              custom: 'property',
+            },
           },
+        } }
+        properties={ {
+          custom: 'property',
         }}
       />
     </Sidebar>
